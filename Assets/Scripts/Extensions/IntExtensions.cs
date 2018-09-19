@@ -4,8 +4,8 @@ using System;
 using UnityEngine;
 
 public static class IntExtensions{
-    public static void Pow(this int x, int value)
+    public static int Pow(this int x, int value)
     {
-        Math.Pow(x, value);
+        return (int)Math.Pow(x, value);
     }
 }
