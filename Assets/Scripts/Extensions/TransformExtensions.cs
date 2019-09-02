@@ -11,7 +11,7 @@ namespace Common
     public static class TransformExtensions
     {
         #region Verification
-        private static bool TrasformNotNull(Transform transform)
+        private static bool NotNull(Transform transform)
         {
             if (transform == null)
             {
@@ -26,7 +26,7 @@ namespace Common
         #region PositionOperation
         public static void SetPosition(this Transform transform, float x, float y, float z)
         {
-            if (!TrasformNotNull(transform))
+            if (!NotNull(transform))
                 return;
 
             transform.position = new Vector3(x, y, z);
@@ -34,7 +34,7 @@ namespace Common
 
         public static void SetPositionFor(this Transform transform, Axis axis, float value)
         {
-            if (!TrasformNotNull(transform))
+            if (!NotNull(transform))
                 return;
 
             switch (axis)
@@ -56,7 +56,7 @@ namespace Common
 
         public static void SetRandomPositionFor(this Transform transform, Axis axis, float min, float max)
         {
-            if (!TrasformNotNull(transform))
+            if (!NotNull(transform))
                 return;
 
             float value = Random.Range(min, max);
@@ -82,7 +82,7 @@ namespace Common
         #region RotationOperation
         public static void SetRotation(this Transform transform, float x, float y, float z)
         {
-            if (!TrasformNotNull(transform))
+            if (!NotNull(transform))
                 return;
 
             transform.rotation = Quaternion.Euler(x, y, z);
@@ -90,7 +90,7 @@ namespace Common
 
         public static void SetRotationFor(this Transform transform, Axis axis, float value)
         {
-            if (!TrasformNotNull(transform))
+            if (!NotNull(transform))
                 return;
 
             switch (axis)
@@ -112,7 +112,7 @@ namespace Common
 
         public static void SetRandomRotationFor(this Transform transform, Axis axis, float min, float max)
         {
-            if (!TrasformNotNull(transform))
+            if (!NotNull(transform))
                 return;
 
             float value = Random.Range(min, max);

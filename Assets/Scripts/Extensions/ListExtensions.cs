@@ -46,9 +46,9 @@ namespace Extensions
         {
             if (list == null) throw new ArgumentException("The list is null!");
 
-            foreach (var item in list)
+            for(int i = 0; i < list.Count; i++)
             {
-                if (item.Equals(value))
+                if (list[i].Equals(value))
                     return true;
             }
 
@@ -79,9 +79,9 @@ namespace Extensions
         {
             if (arr == null) throw new ArgumentException("The array is null!");
 
-            foreach (var item in arr)
+            for(int i = 0; i < arr.Length; i++)
             {
-                if (item.Equals(value))
+                if (arr[i].Equals(value))
                     return true;
             }
 
