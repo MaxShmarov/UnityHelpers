@@ -11,9 +11,9 @@ namespace Common
     public static class TransformExtensions
     {
         #region Verification
-        private static bool NotNull(Transform transform)
+        private static bool NotNull(object obj) 
         {
-            if (transform == null)
+            if (obj == null)
             {
                 Debug.LogError("[Transform] is not initialized!");
                 return false;
